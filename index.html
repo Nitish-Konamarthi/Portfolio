@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitish Venkatesh - Software Engineer</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Inter for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles can be added here if needed */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for fade-in effect on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900">Nitish K.</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition">Skills</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition">Projects</a>
+                <a href="#education" class="text-gray-600 hover:text-indigo-600 transition">Education</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition shadow-sm">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none" title="Toggle Mobile Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block text-gray-600 hover:text-indigo-600 transition">About</a>
+            <a href="#skills" class="block text-gray-600 hover:text-indigo-600 transition">Skills</a>
+            <a href="#projects" class="block text-gray-600 hover:text-indigo-600 transition">Projects</a>
+            <a href="#education" class="block text-gray-600 hover:text-indigo-600 transition">Education</a>
+            <a href="#contact" class="block bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition shadow-sm text-center">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-gray-100 pt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Konamarthi Nitish Veera Venkatesh</h1>
+                <p class="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">Full Stack Developer & Computer Science Student</p>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-8">
+                    Passionate about building innovative and scalable web applications with modern technologies. Currently pursuing B.Tech in Computer Science.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition shadow-md">
+                        <i class="fas fa-code mr-2"></i> View Projects
+                    </a>
+                    <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" title="GitHub Profile" class="text-gray-700 hover:text-indigo-600 transition text-3xl"><i class="fab fa-github"></i></a>
+                    <a href="linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank" title="LinkedIn Profile" class="text-gray-700 hover:text-indigo-600 transition text-3xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+                <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
+                    <p class="mb-4">
+                        I am a dedicated Computer Science student specializing in the MERN stack. I have a strong foundation in building scalable web applications, real-time systems, and user-friendly e-commerce platforms.
+                    </p>
+                    <p class="mb-4">
+                        My passion lies in solving complex problems and transforming ideas into robust digital solutions. I am particularly interested in cloud technologies and have hands-on experience deploying applications on AWS.
+                    </p>
+                    <p>
+                        I am a firm believer in continuous learning and actively participate in hackathons and contribute to open-source projects to stay at the forefront of technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-react text-5xl text-blue-500 mb-2"></i>
+                        <span class="font-semibold">React.js</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-node-js text-5xl text-green-500 mb-2"></i>
+                        <span class="font-semibold">Node.js</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fas fa-database text-5xl text-green-700 mb-2"></i>
+                        <span class="font-semibold">MongoDB</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-2"></i>
+                        <span class="font-semibold">JavaScript</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-python text-5xl text-blue-400 mb-2"></i>
+                        <span class="font-semibold">Python</span>
+                    </div>
+                     <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-php text-5xl text-indigo-400 mb-2"></i>
+                        <span class="font-semibold">PHP</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fas fa-database text-5xl text-blue-600 mb-2"></i>
+                        <span class="font-semibold">MySQL</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-aws text-5xl text-yellow-600 mb-2"></i>
+                        <span class="font-semibold">AWS</span>
+                    </div>
+                    <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-git-alt text-5xl text-red-500 mb-2"></i>
+                        <span class="font-semibold">Git</span>
+                    </div>
+                     <div class="skill-item flex flex-col items-center p-4">
+                        <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
+                        <span class="font-semibold">HTML5/CSS3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">NexChat - Real-time Chat App</h3>
+                            <p class="text-gray-600 mb-4">A full-featured real-time chat application built with the MERN stack, featuring instant messaging and user authentication.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Socket.io</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">NexMerch - E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive B2B e-commerce platform connecting producers directly with retailers, featuring real-time inventory management.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PHP</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Password Generator</h3>
+                            <p class="text-gray-600 mb-4">A secure password generator with customizable options for length, complexity, and character types, built with vanilla JavaScript.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
+                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-gray-50 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
+                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-lg font-bold">Bachelor of Technology, Computer Science</h3>
+                        <p class="text-gray-600">Anil Neerukonda Institute of Technology and Sciences</p>
+                        <p class="text-sm text-gray-500">2022 - Present | CGPA: 8.84</p>
+                    </div>
+                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
+                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-lg font-bold">Intermediate Education (MPC)</h3>
+                        <p class="text-gray-600">Tirumala Junior College, Visakhapatnam</p>
+                        <p class="text-sm text-gray-500">2020 - 2022 | 89.4%</p>
+                    </div>
+                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
+                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
+                        <h3 class="text-lg font-bold">Secondary Education(CBSE)</h3>
+                        <p class="text-gray-600">Vignan Vidhyalayam School, Visakhapatnam</p>
+                        <p class="text-sm text-gray-500">2019 - 2020 | 86.4%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Let's Get In Touch</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
+                <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                        </div>
+                        <button type="submit" id="submitButton" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition shadow-md">
+                            Send Message
+                        </button>
+                    </form>
+                    <!-- Success/Error Message Box -->
+                    <div id="form-message" class="mt-4 text-center"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" title="GitHub Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-github"></i></a>
+                <a href="linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank" title="LinkedIn Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.hackerrank.com/profile/knitishvvenkate1" target="_blank" rel="noopener" title="Hackerrank Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-hackerrank"></i></a>
+                <a href="https://leetcode.com/u/Nitish_Konamarthi/" target="_blank" rel="noopener" title="LeetCode Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fas fa-code"></i></a>
+            </div>
+            <p>&copy; 2024 Konamarthi Nitish Veera Venkatesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // IMPORTANT: Replace with your actual Firebase project configuration
+        // You can get this from your Firebase project settings
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+        
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Contact Form Logic
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('form-message');
+        const submitButton = document.getElementById('submitButton');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+
+            const name = contactForm.name.value;
+            const email = contactForm.email.value;
+            const message = contactForm.message.value;
+
+            try {
+                // Add a new document with a generated ID to the "contacts" collection
+                const docRef = await addDoc(collection(db, "contacts"), {
+                    name: name,
+                    email: email,
+                    message: message,
+                    timestamp: serverTimestamp() // Adds a server-side timestamp
+                });
+
+                console.log("Document written with ID: ", docRef.id);
+                
+                // Show success message
+                formMessage.innerHTML = `<p class="text-green-600 font-semibold">Thank you! Your message has been sent successfully.</p>`;
+                contactForm.reset();
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                // Show error message
+                formMessage.innerHTML = `<p class="text-red-600 font-semibold">Sorry, something went wrong. Please try again later.</p>`;
+            } finally {
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            }
+        });
+    </script>
+    
+    <script>
+        // General Page Interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            });
+
+            // Fade-in animation on scroll
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
