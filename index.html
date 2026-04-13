@@ -1,379 +1,695 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitish Venkatesh - Software Engineer</title>
-    
-    <!-- Tailwind CSS for modern styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts: Inter for a clean, modern look -->
+
+    <!-- ── SEO Meta ── -->
+    <title>Konamarthi Nitish Veera Venkatesh | Full Stack Developer & AI Engineer</title>
+    <meta name="description"
+        content="Portfolio of Nitish Veera Venkatesh — Full Stack Developer, AI/ML Engineer & Research Lead. B.Tech CS @ ANITS. Building intelligent web applications with React, FastAPI, PyTorch and modern cloud infrastructure.">
+    <meta name="keywords"
+        content="Nitish Veera Venkatesh, Full Stack Developer, AI Engineer, React, FastAPI, PyTorch, MERN Stack, Portfolio, Visakhapatnam">
+    <meta name="author" content="Konamarthi Nitish Veera Venkatesh">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nitish-konamarthi.github.io/Portfolio/">
+
+    <!-- ── Open Graph ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nitish Veera Venkatesh | Full Stack Developer & AI Engineer">
+    <meta property="og:description"
+        content="Personal portfolio showcasing projects in AI, Full Stack Development and Research.">
+    <meta property="og:url" content="https://nitish-konamarthi.github.io/Portfolio/">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nitish Veera Venkatesh | Full Stack Developer & AI Engineer">
+    <meta name="twitter:description"
+        content="Personal portfolio showcasing projects in AI, Full Stack Development and Research.">
+
+    <!-- ── Fonts ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-    <style>
-        /* Custom styles can be added here if needed */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Simple animation for fade-in effect on scroll */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <!-- ── Icons ── -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ── Styles ── -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ── JSON-LD Structured Data (AEO/SEO) ── -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Konamarthi Nitish Veera Venkatesh",
+    "url": "https://nitish-konamarthi.github.io/Portfolio/",
+    "jobTitle": "Full Stack Developer & AI/ML Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Anil Neerukonda Institute of Technology and Sciences"
+    },
+    "email": "konamarthinitishvvenkatesh@gmail.com",
+    "telephone": "+91 9392495029",
+    "knowsAbout": ["React", "FastAPI", "PyTorch", "Node.js", "MongoDB", "AWS", "Machine Learning"],
+    "sameAs": [
+      "https://github.com/Nitish-Konamarthi",
+      "https://linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6",
+      "https://leetcode.com/u/Nitish_Konamarthi/",
+      "https://www.hackerrank.com/profile/knitishvvenkate1"
+    ]
+  }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-    <!-- Header & Navigation -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-900">Nitish K.</a>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition">Projects</a>
-                <a href="#education" class="text-gray-600 hover:text-indigo-600 transition">Education</a>
-                <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition shadow-sm">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none" title="Toggle Mobile Menu">
-                <i class="fas fa-bars text-2xl"></i>
+<body>
+
+    <!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#home" class="nav-logo" aria-label="Nitish K. — Home">Nitish K.</a>
+
+            <ul class="nav-links" role="list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+
+            <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-            <a href="#about" class="block text-gray-600 hover:text-indigo-600 transition">About</a>
-            <a href="#skills" class="block text-gray-600 hover:text-indigo-600 transition">Skills</a>
-            <a href="#projects" class="block text-gray-600 hover:text-indigo-600 transition">Projects</a>
-            <a href="#education" class="block text-gray-600 hover:text-indigo-600 transition">Education</a>
-            <a href="#contact" class="block bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition shadow-sm text-center">Contact</a>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center bg-gray-100 pt-20">
-            <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">Konamarthi Nitish Veera Venkatesh</h1>
-                <p class="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">Full Stack Developer & Computer Science Student</p>
-                <p class="max-w-3xl mx-auto text-gray-600 mb-8">
-                    Passionate about building innovative and scalable web applications with modern technologies. Currently pursuing B.Tech in Computer Science.
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- ============================================================
+     HERO
+     ============================================================ -->
+    <section id="home" aria-label="Hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
+
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Available for opportunities
+            </div>
+
+            <h1 class="hero-name">Konamarthi Nitish<br>Veera Venkatesh</h1>
+
+            <p class="hero-tagline">
+                <span id="typewriter">Full Stack Developer</span>
+            </p>
+
+            <p class="hero-description">
+                Building intelligent, scalable web applications at the intersection of modern full-stack engineering and
+                AI. Currently pursuing B.Tech in Computer Science at ANITS.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="#projects" class="btn-primary">
+                    <i class="fas fa-code"></i> View Projects
+                </a>
+                <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" class="btn-secondary">
+                    <i class="fab fa-github"></i> GitHub Profile
+                </a>
+            </div>
+
+            <div class="hero-socials" role="list">
+                <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" class="hero-social-link"
+                    aria-label="GitHub" role="listitem">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank"
+                    rel="noopener" class="hero-social-link" aria-label="LinkedIn" role="listitem">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://leetcode.com/u/Nitish_Konamarthi/" target="_blank" rel="noopener"
+                    class="hero-social-link" aria-label="LeetCode" role="listitem">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://www.hackerrank.com/profile/knitishvvenkate1" target="_blank" rel="noopener"
+                    class="hero-social-link" aria-label="HackerRank" role="listitem">
+                    <i class="fab fa-hackerrank"></i>
+                </a>
+                <a href="mailto:konamarthinitishvvenkatesh@gmail.com" class="hero-social-link" aria-label="Email"
+                    role="listitem">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     ABOUT
+     ============================================================ -->
+    <section id="about" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-avatar-wrap fade-up">
+                    <div class="about-avatar" aria-label="NV initials avatar">NV</div>
+                </div>
+
+                <div class="about-text fade-up">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title" id="about-heading">Crafting Code,<br>Driving Innovation</h2>
+
+                    <p class="about-bio">
+                        I'm a Computer Science student specializing in full-stack development and AI/ML engineering.
+                        My work spans from building production-ready MERN applications to training deep learning models
+                        for medical imaging.
+                        I'm particularly passionate about where software engineering meets real-world impact.
+                    </p>
+                    <p class="about-bio">
+                        I have hands-on experience deploying applications on AWS, designing REST APIs with FastAPI, and
+                        integrating LLMs like Google Gemini into production workflows. I code clean, build fast, and
+                        ship smart.
+                    </p>
+
+                    <div class="about-highlight" aria-label="Currently building">
+                        <i class="fas fa-hammer"></i>
+                        Currently building: Restaurant Billing Software
+                    </div>
+
+                    <div class="about-stats" role="list">
+                        <div class="stat-card fade-up" role="listitem">
+                            <div class="stat-number">8.84</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat-card fade-up" role="listitem">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-card fade-up" role="listitem">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     SKILLS
+     ============================================================ -->
+    <section id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">What I Use</span>
+                <h2 class="section-title" id="skills-heading">Skills & Technologies</h2>
+                <p class="section-subtitle">A curated set of tools and technologies I work with to build robust,
+                    scalable solutions.</p>
+            </div>
+
+            <div class="skills-categories">
+                <div class="skill-category fade-up">
+                    <div class="skill-cat-title">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">Ant Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-up">
+                    <div class="skill-cat-title">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-up">
+                    <div class="skill-cat-title">AI / ML</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">DenseNet-121</span>
+                        <span class="skill-tag">Grad-CAM++</span>
+                        <span class="skill-tag">Gemini AI</span>
+                        <span class="skill-tag">OpenCV</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-up">
+                    <div class="skill-cat-title">Database & Cloud</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Hugging Face</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-up">
+                    <div class="skill-cat-title">Tools & DevOps</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Uvicorn</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+    <section id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">What I've Built</span>
+                <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+                <p class="section-subtitle">A selection of projects that reflect my range — from AI-powered diagnostics
+                    to full-stack web platforms.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Chest X-Ray (FLAGSHIP) -->
+                <div class="project-card featured fade-up">
+                    <div class="project-featured-badge">
+                        <i class="fas fa-star"></i> Flagship Project
+                    </div>
+                    <div class="project-icon">🫁</div>
+                    <h3 class="project-title">Chest X-Ray Diagnostic Assistant</h3>
+                    <p class="project-desc">
+                        An AI-powered medical diagnostic system analyzing chest X-rays through a 3-stage binary
+                        pipeline, detecting 14 pathologies via DenseNet-121 (CheXNet), generating Grad-CAM++ heatmaps,
+                        and producing clinical explanations with Gemini AI. Includes a Geoapify-powered nearby
+                        specialist finder.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React 18</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">DenseNet-121</span>
+                        <span class="tech-tag">Gemini AI</span>
+                        <span class="tech-tag">Grad-CAM++</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Geoapify</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Nitish-Konamarthi/Chest-X-Ray-Diagnostic-Assistant" target="_blank"
+                            rel="noopener" class="project-link" aria-label="Chest X-Ray GitHub Repository">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PassportPro -->
+                <div class="project-card fade-up">
+                    <div class="project-icon">🪪</div>
+                    <h3 class="project-title">PassportPro</h3>
+                    <p class="project-desc">
+                        An instant passport photo generator with country-specific presets. Features AI background
+                        removal via <code>rembg</code>, automatic resizing and A4/Letter sheet layout generation,
+                        supporting drag-and-drop upload and direct download/print.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">rembg</span>
+                        <span class="tech-tag">Pillow</span>
+                        <span class="tech-tag">Ant Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener"
+                            class="project-link" aria-label="PassportPro GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Restaurant Billing -->
+                <div class="project-card fade-up">
+                    <div class="project-wip">
+                        <i class="fas fa-hammer"></i> In Progress
+                    </div>
+                    <div class="project-icon">🍽️</div>
+                    <h3 class="project-title">Restaurant Billing Software</h3>
+                    <p class="project-desc">
+                        A full-featured restaurant billing and management system with table management, order tracking,
+                        bill generation with GST calculation, and real-time inventory management. Designed for local
+                        restaurant businesses.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link" style="color:var(--text-muted); cursor:default;">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Password Generator -->
+                <div class="project-card fade-up">
+                    <div class="project-icon">🔐</div>
+                    <h3 class="project-title">Password Generator</h3>
+                    <p class="project-desc">
+                        A secure, client-side password generator with fully customizable options — length, uppercase,
+                        lowercase, numbers, and symbols. Zero dependencies, built with vanilla JavaScript for maximum
+                        speed and portability.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener"
+                            class="project-link" aria-label="Password Generator GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     RESEARCH
+     ============================================================ -->
+    <section id="research" aria-labelledby="research-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Academic Work</span>
+                <h2 class="section-title" id="research-heading">Research</h2>
+                <p class="section-subtitle">Contributing to the scientific community through applied AI research in
+                    medical imaging.</p>
+            </div>
+
+            <div class="research-card fade-up">
+                <div class="research-lead-badge">
+                    <i class="fas fa-crown"></i> Research Lead &amp; Main Author
+                </div>
+
+                <h3 class="research-title">
+                    AI-Powered Chest X-Ray Diagnostic System: Integrating Multi-Stage Pathology Detection, Grad-CAM++
+                    Explainability, and LLM-Based Clinical Explanations
+                </h3>
+
+                <p class="research-desc">
+                    A comprehensive research paper presenting a novel 3-stage binary pipeline for chest X-ray analysis
+                    combining DenseNet-121 for 14-pathology detection, Grad-CAM++ gradient-weighted heatmaps
+                    for visual explainability, and Google Gemini AI for generating clinician-grade textual explanations
+                    — all with sub-500ms inference.
                 </p>
-                <div class="flex justify-center items-center space-x-4">
-                    <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition shadow-md">
-                        <i class="fas fa-code mr-2"></i> View Projects
-                    </a>
-                    <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" title="GitHub Profile" class="text-gray-700 hover:text-indigo-600 transition text-3xl"><i class="fab fa-github"></i></a>
-                    <a href="linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank" title="LinkedIn Profile" class="text-gray-700 hover:text-indigo-600 transition text-3xl"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-                <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
-                    <p class="mb-4">
-                        I am a dedicated Computer Science student specializing in the MERN stack. I have a strong foundation in building scalable web applications, real-time systems, and user-friendly e-commerce platforms.
-                    </p>
-                    <p class="mb-4">
-                        My passion lies in solving complex problems and transforming ideas into robust digital solutions. I am particularly interested in cloud technologies and have hands-on experience deploying applications on AWS.
-                    </p>
-                    <p>
-                        I am a firm believer in continuous learning and actively participate in hackathons and contribute to open-source projects to stay at the forefront of technology.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-50 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-react text-5xl text-blue-500 mb-2"></i>
-                        <span class="font-semibold">React.js</span>
+                <div class="research-meta">
+                    <div class="research-meta-item">
+                        <i class="fas fa-university"></i>
+                        <span>International Conference Paper</span>
                     </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-node-js text-5xl text-green-500 mb-2"></i>
-                        <span class="font-semibold">Node.js</span>
+                    <div class="research-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2025 - 2026</span>
                     </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fas fa-database text-5xl text-green-700 mb-2"></i>
-                        <span class="font-semibold">MongoDB</span>
-                    </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-2"></i>
-                        <span class="font-semibold">JavaScript</span>
-                    </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-python text-5xl text-blue-400 mb-2"></i>
-                        <span class="font-semibold">Python</span>
-                    </div>
-                     <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-php text-5xl text-indigo-400 mb-2"></i>
-                        <span class="font-semibold">PHP</span>
-                    </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fas fa-database text-5xl text-blue-600 mb-2"></i>
-                        <span class="font-semibold">MySQL</span>
-                    </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-aws text-5xl text-yellow-600 mb-2"></i>
-                        <span class="font-semibold">AWS</span>
-                    </div>
-                    <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-git-alt text-5xl text-red-500 mb-2"></i>
-                        <span class="font-semibold">Git</span>
-                    </div>
-                     <div class="skill-item flex flex-col items-center p-4">
-                        <i class="fab fa-html5 text-5xl text-orange-500 mb-2"></i>
-                        <span class="font-semibold">HTML5/CSS3</span>
+                    <div class="research-meta-item">
+                        <i class="fas fa-flask"></i>
+                        <span>Medical AI · Deep Learning · CNN</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">NexChat - Real-time Chat App</h3>
-                            <p class="text-gray-600 mb-4">A full-featured real-time chat application built with the MERN stack, featuring instant messaging and user authentication.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
-                                <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Socket.io</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
-                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
-                            </div>
-                        </div>
+                <a href="IEEE_Conference_Template --april--9th final.pdf" target="_blank" rel="noopener"
+                    class="research-link" aria-label="View IEEE Research Paper PDF">
+                    <i class="fas fa-file-pdf"></i> View Paper
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
+    <section id="certifications" aria-labelledby="certs-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Credentials</span>
+                <h2 class="section-title" id="certs-heading">Certifications</h2>
+                <p class="section-subtitle">Verified credentials from globally recognized organizations in cloud, AI,
+                    and software engineering.</p>
+            </div>
+
+            <div class="certs-grid">
+
+                <a href="https://www.credly.com/go/yfdPD03d" target="_blank" rel="noopener" class="cert-card fade-up"
+                    aria-label="AWS Academy Cloud Foundations Certificate">
+                    <div class="cert-icon">☁️</div>
+                    <div class="cert-info">
+                        <div class="cert-name">AWS Academy Graduate — Cloud Foundations</div>
+                        <div class="cert-issuer">Amazon Web Services (AWS)</div>
+                        <div class="cert-cta">View Badge <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <!-- Project Card 2 -->
-                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">NexMerch - E-commerce Platform</h3>
-                            <p class="text-gray-600 mb-4">A comprehensive B2B e-commerce platform connecting producers directly with retailers, featuring real-time inventory management.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">PHP</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">MySQL</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
-                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
-                            </div>
-                        </div>
+                </a>
+
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=8D07CC57CB896E6591F7CCA8A0A7B10E6FAD82CA9841AF26824F3F7080C7C3DE"
+                    target="_blank" rel="noopener" class="cert-card fade-up"
+                    aria-label="Oracle OCI AI Foundations Certificate">
+                    <div class="cert-icon">🤖</div>
+                    <div class="cert-info">
+                        <div class="cert-name">Oracle Cloud Infrastructure — AI Foundations Associate</div>
+                        <div class="cert-issuer">Oracle</div>
+                        <div class="cert-cta">View Badge <i class="fas fa-arrow-right"></i></div>
                     </div>
-                    <!-- Project Card 3 -->
-                    <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Password Generator</h3>
-                            <p class="text-gray-600 mb-4">A secure password generator with customizable options for length, complexity, and character types, built with vanilla JavaScript.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
-                                <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
-                            </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-indigo-600 hover:underline">Live Demo <i class="fas fa-external-link-alt ml-1"></i></a>
-                                <a href="#" class="text-indigo-600 hover:underline">GitHub <i class="fab fa-github ml-1"></i></a>
-                            </div>
+                </a>
+
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=C29BD4ED22E08781FE26EE4434FBB9A43536F7425E7BDF8178BBA17A99FC9CD4"
+                    target="_blank" rel="noopener" class="cert-card fade-up"
+                    aria-label="Oracle OCI Cloud Foundations Certificate">
+                    <div class="cert-icon">🏛️</div>
+                    <div class="cert-info">
+                        <div class="cert-name">Oracle Cloud Infrastructure — Foundations Associate</div>
+                        <div class="cert-issuer">Oracle</div>
+                        <div class="cert-cta">View Badge <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="https://badges.parchment.com/public/assertions/kzl58bQASCW-17BgPi70Bw?identity__email=konamarthinitishvvenkatesh%40gmail.com"
+                    target="_blank" rel="noopener" class="cert-card fade-up"
+                    aria-label="Postman API Fundamentals Student Expert Certificate">
+                    <div class="cert-icon">📮</div>
+                    <div class="cert-info">
+                        <div class="cert-name">Postman API Fundamentals Student Expert</div>
+                        <div class="cert-issuer">Postman</div>
+                        <div class="cert-cta">View Badge <i class="fas fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <div class="cert-card fade-up" style="cursor:default;" aria-label="IoT Introduction Certificate">
+                    <div class="cert-icon">📡</div>
+                    <div class="cert-info">
+                        <div class="cert-name">Introduction to Internet of Things</div>
+                        <div class="cert-issuer">NPTEL / Cisco</div>
+                        <div class="cert-cta" style="color:var(--text-muted);">Completed</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     EDUCATION
+     ============================================================ -->
+    <section id="education" aria-labelledby="education-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Academic Background</span>
+                <h2 class="section-title" id="education-heading">Education</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot" aria-hidden="true">🎓</div>
+                    <div class="timeline-content">
+                        <div class="timeline-degree">Bachelor of Technology — Computer Science & Engineering</div>
+                        <div class="timeline-institution">Anil Neerukonda Institute of Technology and Sciences (ANITS),
+                            Visakhapatnam</div>
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2022 – Present</span>
+                            <span class="timeline-grade">CGPA: 8.84</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Education Section -->
-        <section id="education" class="py-20 bg-gray-50 fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
-                <div class="max-w-3xl mx-auto">
-                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
-                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
-                        <h3 class="text-lg font-bold">Bachelor of Technology, Computer Science</h3>
-                        <p class="text-gray-600">Anil Neerukonda Institute of Technology and Sciences</p>
-                        <p class="text-sm text-gray-500">2022 - Present | CGPA: 8.84</p>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot" aria-hidden="true">📚</div>
+                    <div class="timeline-content">
+                        <div class="timeline-degree">Intermediate Education — MPC (Mathematics, Physics, Chemistry)
+                        </div>
+                        <div class="timeline-institution">Tirumala Junior College, Visakhapatnam</div>
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2020 – 2022</span>
+                            <span class="timeline-grade">89.4%</span>
+                        </div>
                     </div>
-                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
-                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
-                        <h3 class="text-lg font-bold">Intermediate Education (MPC)</h3>
-                        <p class="text-gray-600">Tirumala Junior College, Visakhapatnam</p>
-                        <p class="text-sm text-gray-500">2020 - 2022 | 89.4%</p>
-                    </div>
-                    <div class="relative border-l-2 border-indigo-200 pl-8 py-4">
-                        <div class="absolute w-4 h-4 bg-indigo-600 rounded-full -left-2 top-4"></div>
-                        <h3 class="text-lg font-bold">Secondary Education(CBSE)</h3>
-                        <p class="text-gray-600">Vignan Vidhyalayam School, Visakhapatnam</p>
-                        <p class="text-sm text-gray-500">2019 - 2020 | 86.4%</p>
                 </div>
-            </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white fade-in-section">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-4">Let's Get In Touch</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
-                <div class="max-w-lg mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
-                    <form id="contactForm">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                <div class="timeline-item fade-up">
+                    <div class="timeline-dot" aria-hidden="true">🏫</div>
+                    <div class="timeline-content">
+                        <div class="timeline-degree">Secondary Education — CBSE (Class X)</div>
+                        <div class="timeline-institution">Vignan Vidhyalayam School, Visakhapatnam</div>
+                        <div class="timeline-meta">
+                            <span class="timeline-year">2019 – 2020</span>
+                            <span class="timeline-grade">86.4%</span>
                         </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     CONTACT
+     ============================================================ -->
+    <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title" id="contact-heading">Let's Connect</h2>
+                <p class="section-subtitle">Whether it's about a project, a role, or just a conversation — my inbox is
+                    open.</p>
+            </div>
+
+            <div class="contact-grid">
+
+                <!-- Left: Info -->
+                <div class="contact-info fade-up">
+                    <h3>Reach me directly</h3>
+                    <p>I'm actively open to internship and full-time opportunities. Response time is usually within 24
+                        hours.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                            <a
+                                href="mailto:konamarthinitishvvenkatesh@gmail.com">konamarthinitishvvenkatesh@gmail.com</a>
                         </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+                            <a href="tel:+919392495029">+91 93924 95029</a>
                         </div>
-                        <button type="submit" id="submitButton" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition shadow-md">
-                            Send Message
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <span>Visakhapatnam, Andhra Pradesh, India</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank"
+                            rel="noopener" class="contact-social" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://leetcode.com/u/Nitish_Konamarthi/" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/knitishvvenkate1" target="_blank" rel="noopener"
+                            class="contact-social" aria-label="HackerRank">
+                            <i class="fab fa-hackerrank"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrap fade-up">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required
+                                autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="john@example.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Tell me about your project or opportunity..." required></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i>&nbsp; Send Message
                         </button>
                     </form>
-                    <!-- Success/Error Message Box -->
-                    <div id="form-message" class="mt-4 text-center"></div>
+                    <div id="form-message" role="alert" aria-live="polite"></div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener" title="GitHub Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-github"></i></a>
-                <a href="linkedin.com/in/konamarthi-nitish-veera-venkatesh-4380282b6" target="_blank" title="LinkedIn Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.hackerrank.com/profile/knitishvvenkate1" target="_blank" rel="noopener" title="Hackerrank Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fab fa-hackerrank"></i></a>
-                <a href="https://leetcode.com/u/Nitish_Konamarthi/" target="_blank" rel="noopener" title="LeetCode Profile" class="hover:text-indigo-400 transition text-2xl"><i class="fas fa-code"></i></a>
             </div>
-            <p>&copy; 2024 Konamarthi Nitish Veera Venkatesh. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     FOOTER
+     ============================================================ -->
+    <footer>
+        <div class="container footer-inner">
+            <p class="footer-copy">
+                &copy; 2025 Konamarthi Nitish Veera Venkatesh. All rights reserved.
+            </p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/Nitish-Konamarthi" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Firebase SDK -->
-    <script type="module">
-        // IMPORTANT: Replace with your actual Firebase project configuration
-        // You can get this from your Firebase project settings
-        const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_AUTH_DOMAIN",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_STORAGE_BUCKET",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
-        };
-        
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        // Contact Form Logic
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('form-message');
-        const submitButton = document.getElementById('submitButton');
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-
-            const name = contactForm.name.value;
-            const email = contactForm.email.value;
-            const message = contactForm.message.value;
-
-            try {
-                // Add a new document with a generated ID to the "contacts" collection
-                const docRef = await addDoc(collection(db, "contacts"), {
-                    name: name,
-                    email: email,
-                    message: message,
-                    timestamp: serverTimestamp() // Adds a server-side timestamp
-                });
-
-                console.log("Document written with ID: ", docRef.id);
-                
-                // Show success message
-                formMessage.innerHTML = `<p class="text-green-600 font-semibold">Thank you! Your message has been sent successfully.</p>`;
-                contactForm.reset();
-
-            } catch (error) {
-                console.error("Error adding document: ", error);
-                // Show error message
-                formMessage.innerHTML = `<p class="text-red-600 font-semibold">Sorry, something went wrong. Please try again later.</p>`;
-            } finally {
-                // Re-enable button
-                submitButton.disabled = false;
-                submitButton.innerHTML = 'Send Message';
-            }
-        });
-    </script>
-    
-    <script>
-        // General Page Interactivity
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // Mobile Menu Toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Header scroll effect
-            const header = document.getElementById('header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('shadow-md');
-                } else {
-                    header.classList.remove('shadow-md');
-                }
-            });
-
-            // Fade-in animation on scroll
-            const sections = document.querySelectorAll('.fade-in-section');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
